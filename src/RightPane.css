@@ -1,0 +1,35 @@
+.RightPane {
+    grid-template-rows: auto 1fr auto;
+    /*Függőlegesen három részre osztjuk, a felső és alsó csak egy
+        soros, a középső a maradék helyet veszi fel*/
+
+    .conversation-header {
+        padding-inline: 8px;
+        /* Hely*/
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* Vízszintesen szétválasztva*/
+    }
+
+    .messages {
+        overflow-y: auto;
+        /* Függőleges scroll bar bekapcsolása*/
+        padding: 8px;
+        /* Hely a szöveg körül*/
+        justify-items: start;
+        /* Balra rendezés*/
+        align-content: start;
+        /* Felülre igazítás, összehúzás*/
+        gap: 8px;
+        /* Távolság az üzenetek között*/
+        grid-template-rows: auto;
+        /* Az elemek függőleges méretének minimálisra (contentre) állítása*/
+    }
+
+    @media (min-width: 650px) {
+        button {
+            display: none;
+        }
+    }
+}
